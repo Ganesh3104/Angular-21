@@ -1,0 +1,17 @@
+<p>event works!</p>
+<button name="login" class="lg-btn" (click)="handleEvent($event)">Click Event</button>
+
+<br><br>
+
+<div (mouseenter)="handleEvent($event)" style="background-color: aqua; width: 100px; height: 100px;">
+
+</div>
+
+<div (mouseleave)="handleEvent($event)" style="background-color: red; width: 100px; height: 100px; margin-top: 10px;">
+
+</div>
+<br><br><br>
+
+<input (input)="handleEvent($event)" type="text" name="" id="">
+<br><br>
+<input (focus)="handleEvent($event)" (blur)="handleEvent($event)" type="text">

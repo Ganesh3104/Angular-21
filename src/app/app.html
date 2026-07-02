@@ -38,4 +38,60 @@
 <!-- <button (click)="dataType()" style="margin: 20px;">click</button>
 <button (click)="sum(10, 20)">sum</button> -->
 
-<app-counter-app></app-counter-app>
+<!-- <app-counter-app></app-counter-app> -->
+<!-- <app-event></app-event> -->
+<!-- <app-inputvalueget></app-inputvalueget> -->
+
+
+
+
+<!-- if else using html -->
+
+<!-- @if(x>19){
+    <div style="padding: 30px; background-color:rgb(43, 46, 39); width: 30px; height: 30px;"></div>
+} -->
+
+<!-- <button (click)="toggle()">toggle</button>
+
+@if(display){
+    <div style="padding: 30px; background-color:greenyellow; width: 30px; height: 30px;"></div>
+} -->
+
+
+<!-- <button (click)="toggletwo()" style="margin: 10px;">{{showData?'show red div':'show aqua div'}}</button>
+@if(showData){
+    <div style="padding: 30px; background-color: aqua; border: 1px solid black; width: 20px; border-radius: 10px;"></div>
+}@else{
+    <div style="padding: 30px; background-color: rgb(233, 50, 50); border: 1px solid black; width: 20px; border-radius: 10px;"></div>
+}
+ -->
+
+
+
+
+
+
+<!-- else if using HTML -->
+
+<button (click)="handleColor(1)">red</button>
+<button (click)="handleColor(2)">green</button>
+<button (click)="handleColor(3)">yellow</button>
+<button (click)="handleColor(10)">other</button>
+<input type="text" (input)="handleInput($event)">
+
+@if(color==1){
+    <div style="padding: 30px; height: 30px; width: 30px; background-color: red; border-radius: 10px; margin: 10px;"></div>
+
+}
+@else if(color==2){
+    <div style="padding: 30px; height: 30px; width: 30px; background-color: green; border-radius: 10px; margin: 10px;"></div>
+
+}
+@else if(color==3){
+    <div style="padding: 30px; height: 30px; width: 30px; background-color: yellow; border-radius: 10px; margin: 10px;"></div>
+
+}
+@else{
+    <div style="padding: 30px; height: 30px; width: 30px; background-color: black; border-radius: 10px; margin: 10px;"></div>
+
+}

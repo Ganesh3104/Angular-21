@@ -3,10 +3,12 @@ import { Login } from './login/login';
 import { SignUp } from './sign-up/sign-up';
 import { Profile } from './profile/profile';
 import { CounterApp } from './counter-app/counter-app';
+import { Event } from './event/event';
+import { Inputvalueget } from './inputvalueget/inputvalueget';
 
 @Component({
   selector: 'app-root',
-  imports: [Login, SignUp, Profile, CounterApp],
+  imports: [Login, SignUp, Profile, CounterApp, Event, Inputvalueget],
   templateUrl: './app.html',
   // template: `<h1>inline tag {{name}}</h1>`,    inline html
   styleUrl: './app.css',
@@ -41,27 +43,51 @@ export class App {
 
   // datatype
 
-  name:string= "my name";  //property because it is in class
-  company="new company"
-  data:any="old"
-  age:number | string = "twentytwo"
+  // name:string= "my name";  //property because it is in class
+  // company="new company"
+  // data:any="old"
+  // age:number | string = "twentytwo"
 
-  dataType(){
-    this.name = "peter"   //allow string value only if any other show error
-    this.company="company" // without type defined also work proper
-    this.data=123; // if we use any then it accept any value
-    this.age=22;  // we can define multiple type
-    let x:number =20;   // variable because itt is in function
-    console.log(x);
-  }
+  // dataType(){
+  //   this.name = "peter"   //allow string value only if any other show error
+  //   this.company="company" // without type defined also work proper
+  //   this.data=123; // if we use any then it accept any value
+  //   this.age=22;  // we can define multiple type
+  //   let x:number =20;   // variable because itt is in function
+  //   console.log(x);
+  // }
 
-  sum(a:number, b:number){
-    let sum = a + b;
-    console.log(sum);
-  }
+  // sum(a:number, b:number){
+  //   let sum = a + b;
+  //   console.log(sum);
+  // }
+
+  // if else by using html
+  // display=false;
+  // x=20;
+
+  // showData=false;
+
+  // toggle(){
+  //   this.display=!this.display;
+  // }
+
+  // toggletwo(){
+  //   this.showData =!this.showData;
+  // }
 
 
+// else if
 
+color=0;
+
+handleColor(val:number){
+   this.color=val;
+}
+
+handleInput(event:any){
+   this.color = parseInt((event.target as HTMLInputElement).value)
+}
 
 
 }
